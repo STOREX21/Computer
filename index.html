@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="images/logo_1.png" type="image/x-icon">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <a href="#"><img class="Logo" src="images/Logo_1.png" alt=""></a>
+
+        <nav class="navigation">
+            <a href="#About">who are we?</a>
+            <a href="#Projects">Certificates</a>
+            <a href="#Contact">Contact us </a>
+            <a href="indexARA.html">عربي</a>
+        </nav>
+
+
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <section class="main" id="main">
+        <h1 class="me"><span>Welcome to Computer Academy</span></h1>
+        <p>We offer you internationally accredited programming courses</p>
+        <div class="nav-buttons">
+            <a href="#About"><button>About</button></a>
+            <a href="#Projects"><button>Projects</button></a>
+            <a href="#Contact"><button>Contact</button></a>
+            <a href="indexARA.html"><button>عربي</button></a>
+        </div>
+        <img class="bird" src="images/bird.png" alt="">
+    </section>
+
+    <section class="about" id="About">
+        <h2 class="h1-about"> who are we?</h2>
+        <div class="about-div">
+            We are a group of universities that established a <span>computer academy to teach information
+                technology</span>. In this course, we will provide you with lessons on how to create web pages (website
+            programming). We will begin with the precise details, God willing. After the lessons, there will be a test
+            about the lesson, and you will be given an accredited certificate after the test and pass with a high
+            degree.<br>
+            Best regards, <span>Computer Academy</span>
+        </div>
+    </section>
+
+
+
+    <section class="contact" id="Contact">
+        <h1 style="font-size: 50px;">Contact us</h1>
+
+        <button onclick="copyEmail()" class="email-button">
+            <img src="images/logo_1.png" alt="">
+            <p id="my-email" style="font-size: 20px; font-weight: 700; color: #1e1e1e; margin-top: 15px;">
+                Course link</p>
+        </button>
+
+        <script>
+            function copyEmail() {
+                var text = document.getElementById("my-email")
+
+                navigator.clipboard.writeText(text.innerHTML)
+
+                alert("Course link copied")
+            }
+        </script>
+
+        <a target="_blank" href="https://www.tiktok.com/@mohammedalmahi42">
+            <button class="contact-button"><img src="images/logo_1.png" alt=""></button>
+        </a>
+
+    </section>
+
+    <script>
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+</body>
+
+</html>
